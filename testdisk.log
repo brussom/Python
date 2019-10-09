@@ -1,0 +1,215 @@
+
+
+Wed Oct  9 04:26:24 2019
+Command line: TestDisk
+
+TestDisk 6.14, Data Recovery Utility, July 2013
+Christophe GRENIER <grenier@cgsecurity.org>
+http://www.cgsecurity.org
+OS: Linux, kernel 4.9.35-v7+ (#1014 SMP Fri Jun 30 14:47:43 BST 2017) armv7l
+Compiler: GCC 4.9
+Compilation date: 2014-10-21T07:00:31
+ext2fs lib: 1.43.3, ntfs lib: libntfs-3g, reiserfs lib: none, ewf lib: none
+Warning: can't get size for Disk /dev/mapper/control - 0 B - 1 sectors, sector size=512
+Hard disk list
+Disk /dev/mmcblk0 - 15 GB / 14 GiB - CHS 486192 4 16, sector size=512
+
+Partition table type (auto): Intel
+Disk /dev/mmcblk0 - 15 GB / 14 GiB
+Partition table type: Intel
+
+Analyse Disk /dev/mmcblk0 - 15 GB / 14 GiB - CHS 486192 4 16
+Geometry from i386 MBR: head=64 sector=32
+BAD_RS LBA=8192 4096
+FAT16 at 128/0/1
+check_FAT: Unusual number of reserved sectors 4 (FAT), should be 1.
+Info: size boot_sector 116736, partition 116736
+FAT1 : 4-119
+FAT2 : 120-235
+start_rootdir : 236
+Data : 268-116735
+sectors : 116736
+cluster_size : 4
+no_of_cluster : 29117 (2 - 29118)
+fat_length 116 calculated 114
+heads/cylinder 64 (FAT) != 4 (HD)
+sect/track 32 (FAT) != 16 (HD)
+BAD_RS LBA=124928 62464
+get_geometry_from_list_part_aux head=4 nbr=4
+get_geometry_from_list_part_aux head=8 nbr=4
+get_geometry_from_list_part_aux head=16 nbr=4
+get_geometry_from_list_part_aux head=32 nbr=4
+get_geometry_from_list_part_aux head=64 nbr=4
+get_geometry_from_list_part_aux head=128 nbr=3
+Current partition structure:
+check_FAT: Unusual number of reserved sectors 4 (FAT), should be 1.
+Warning: number of heads/cylinder mismatches 64 (FAT) != 4 (HD)
+Warning: number of sectors per track mismatches 32 (FAT) != 16 (HD)
+ 1 * FAT16 LBA              128   0  1  1951   3 16     116736 [boot]
+
+Warning: Bad ending sector (CHS and LBA don't match)
+ 2 P Linux                 1952   0  1 486191   3 16   30991360 [retropie]
+
+Warning: Bad ending sector (CHS and LBA don't match)
+
+search_part()
+Disk /dev/mmcblk0 - 15 GB / 14 GiB - CHS 486192 4 16
+FAT16 at 128/0/1
+check_FAT: Unusual number of reserved sectors 4 (FAT), should be 1.
+FAT1 : 4-119
+FAT2 : 120-235
+start_rootdir : 236
+Data : 268-116735
+sectors : 116736
+cluster_size : 4
+no_of_cluster : 29117 (2 - 29118)
+fat_length 116 calculated 114
+heads/cylinder 64 (FAT) != 4 (HD)
+sect/track 32 (FAT) != 16 (HD)
+
+FAT16 at 128/0/1
+     FAT16 LBA              128   0  1  1951   3 16     116736 [boot]
+     FAT16, blocksize=2048, 59 MB / 57 MiB
+
+recover_EXT2: s_block_group_nr=0/118, s_mnt_count=143/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8000
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 3873920
+recover_EXT2: part_size 30991360
+     Linux                 1952   0  1 486191   3 16   30991360 [retropie]
+     ext4 blocksize=4096 Large file Sparse superblock Recover, 15 GB / 14 GiB
+get_geometry_from_list_part_aux head=4 nbr=4
+get_geometry_from_list_part_aux head=8 nbr=4
+get_geometry_from_list_part_aux head=16 nbr=4
+get_geometry_from_list_part_aux head=32 nbr=4
+get_geometry_from_list_part_aux head=64 nbr=4
+get_geometry_from_list_part_aux head=128 nbr=3
+Warning: the current number of heads per cylinder is 4 but the correct value may be 64.
+
+Results
+   * FAT16 LBA              128   0  1  1951   3 16     116736 [boot]
+     FAT16, blocksize=2048, 59 MB / 57 MiB
+   P Linux                 1952   0  1 486207   3 16   30992384 [retropie]
+     ext4 blocksize=4096 Large file Sparse superblock Recover, 15 GB / 14 GiB
+
+interface_write()
+ 1 * FAT16 LBA              128   0  1  1951   3 16     116736 [boot]
+ 2 P Linux                 1952   0  1 486207   3 16   30992384 [retropie]
+simulate write!
+
+write_mbr_i386: starting...
+write_all_log_i386: starting...
+No extended partition
+
+Interface Advanced
+Geometry from i386 MBR: head=64 sector=32
+BAD_RS LBA=8192 4096
+FAT16 at 128/0/1
+check_FAT: Unusual number of reserved sectors 4 (FAT), should be 1.
+Info: size boot_sector 116736, partition 116736
+FAT1 : 4-119
+FAT2 : 120-235
+start_rootdir : 236
+Data : 268-116735
+sectors : 116736
+cluster_size : 4
+no_of_cluster : 29117 (2 - 29118)
+fat_length 116 calculated 114
+heads/cylinder 64 (FAT) != 4 (HD)
+sect/track 32 (FAT) != 16 (HD)
+BAD_RS LBA=124928 62464
+get_geometry_from_list_part_aux head=4 nbr=4
+get_geometry_from_list_part_aux head=8 nbr=4
+get_geometry_from_list_part_aux head=16 nbr=4
+get_geometry_from_list_part_aux head=32 nbr=4
+get_geometry_from_list_part_aux head=64 nbr=4
+get_geometry_from_list_part_aux head=128 nbr=3
+ 1 * FAT16 LBA              128   0  1  1951   3 16     116736 [boot]
+     FAT16, blocksize=2048, 59 MB / 57 MiB
+ 2 P Linux                 1952   0  1 486191   3 16   30991360 [retropie]
+     ext4 blocksize=4096 Large file Sparse superblock Recover, 15 GB / 14 GiB
+search_superblock
+
+recover_EXT2: s_block_group_nr=0/118, s_mnt_count=143/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8000
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 3873920
+recover_EXT2: part_size 30991360
+Ext2 superblock found at sector 2 (block=0, blocksize=4096)
+
+recover_EXT2: s_block_group_nr=0/118, s_mnt_count=1/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8000
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 3873920
+recover_EXT2: part_size 30991360
+Ext2 superblock found at sector 262144 (block=32768, blocksize=4096)
+
+recover_EXT2: s_block_group_nr=0/118, s_mnt_count=1/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8000
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 3873920
+recover_EXT2: part_size 30991360
+Ext2 superblock found at sector 786432 (block=98304, blocksize=4096)
+
+recover_EXT2: s_block_group_nr=0/118, s_mnt_count=1/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8000
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 3873920
+recover_EXT2: part_size 30991360
+Ext2 superblock found at sector 1310720 (block=163840, blocksize=4096)
+
+recover_EXT2: s_block_group_nr=0/118, s_mnt_count=1/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8000
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 3873920
+recover_EXT2: part_size 30991360
+Ext2 superblock found at sector 1835008 (block=229376, blocksize=4096)
+
+recover_EXT2: s_block_group_nr=0/118, s_mnt_count=1/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8000
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 3873920
+recover_EXT2: part_size 30991360
+Ext2 superblock found at sector 2359296 (block=294912, blocksize=4096)
+
+recover_EXT2: s_block_group_nr=0/118, s_mnt_count=1/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8000
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 3873920
+recover_EXT2: part_size 30991360
+Ext2 superblock found at sector 6553600 (block=819200, blocksize=4096)
+
+recover_EXT2: s_block_group_nr=0/118, s_mnt_count=1/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8000
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 3873920
+recover_EXT2: part_size 30991360
+Ext2 superblock found at sector 7077888 (block=884736, blocksize=4096)
+
+recover_EXT2: s_block_group_nr=0/118, s_mnt_count=1/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8000
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 3873920
+recover_EXT2: part_size 30991360
+Ext2 superblock found at sector 12845056 (block=1605632, blocksize=4096)
+
+recover_EXT2: s_block_group_nr=0/118, s_mnt_count=1/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8000
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 3873920
+recover_EXT2: part_size 30991360
+Ext2 superblock found at sector 21233664 (block=2654208, blocksize=4096)
+  Linux                 1952   0  1 486191   3 16   30991360 [retropie]
+superblock 0, blocksize=4096 [retropie]
+  Linux                 6048   0  1 490287   3 16   30991360 [retropie]
+superblock 0, blocksize=4096 [retropie]
+  Linux                14240   0  1 498479   3 16   30991360 [retropie]
+superblock 0, blocksize=4096 [retropie]
+  Linux                22432   0  1 506671   3 16   30991360 [retropie]
+superblock 0, blocksize=4096 [retropie]
+  Linux                30624   0  1 514863   3 16   30991360 [retropie]
+superblock 0, blocksize=4096 [retropie]
+  Linux                38816   0  1 523055   3 16   30991360 [retropie]
+superblock 0, blocksize=4096 [retropie]
+  Linux                104352   0  1 588591   3 16   30991360 [retropie]
+superblock 0, blocksize=4096 [retropie]
+  Linux                112544   0  1 596783   3 16   30991360 [retropie]
+superblock 0, blocksize=4096 [retropie]
+  Linux                202656   0  1 686895   3 16   30991360 [retropie]
+superblock 0, blocksize=4096 [retropie]
+  Linux                333728   0  1 817967   3 16   30991360 [retropie]
+superblock 0, blocksize=4096 [retropie]
+
+To repair the filesystem using alternate superblock, run
+fsck.ext4 -p -b superblock -B blocksize device
+
+TestDisk exited normally.

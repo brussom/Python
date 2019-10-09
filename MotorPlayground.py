@@ -3,6 +3,8 @@ import MotorControl
 import RPi.GPIO as GPIO
 from adafruit_servokit import ServoKit
 print ("Imported ServoKit")
+print ("Change to test GitHub")
+
 currentPos = 0
 DesiredPosition =0
 

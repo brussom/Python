@@ -6,6 +6,7 @@ class StepperController:
     coil_A_2_pin = 0
     coil_B_1_pin = 0
     coil_B_2_pin = 0
+    
 
     def __init__(self, pin1, pin2, pin3, pin4):
         self.coil_A_1_pin = pin1
@@ -65,5 +66,26 @@ class StepperController:
             time.sleep(WaitTime)
 
 class ServoController:
-    print ("hi")
-    print ("Debug")
+    sigPin = 0 
+    pwm = None
+
+    print("init")
+    def __init__(self, sigPin):
+        #set up signal pin.
+        #GPIO.setmode(GPIO.BOARD)
+        GPIO.setup(sigPin, GPIO.OUT)
+        self.pwm=GPIO.PWM(sigPin, 50) #Set frequency of PWM
+        print (sigPin)
+        self.pwm.start(0)
+
+        print ("Created new servo controller")
+
+    def setAngle(self,angle)    :
+        return angle/18+2
+    def cycleMotor(self, angle):
+        
+        
+        self.pwm.ChangeDutyCycle(self.setAngle(angle))
+        time.sleep(1000/1000)
+        
+        
